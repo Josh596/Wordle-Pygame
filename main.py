@@ -86,7 +86,7 @@ class MainWindow(QWidget):
             if event.key() in [Qt.Key_Enter, Qt.Key_Return]:
                 try:
                     text = self.getActiveGuess().getWord()
-                    if self.getActiveGuess().check_guess('hello'):
+                    if self.getActiveGuess().check_guess(self.solution):
                         self.board.game_over = True
                         return
                     self.getActiveGuess().checked = True
